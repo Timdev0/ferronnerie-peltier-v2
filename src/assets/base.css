@@ -34,6 +34,17 @@
   --color-text: var(--vt-c-text-light-1);
 
   --section-gap: 160px;
+
+  --color-primary: #4A4A4A;
+
+  --color-secondary: #5A6A73;
+
+  --color-ter: #B0A295;
+
+  --color-white: #F5F5F5;
+
+  --couleur-blue: #2C3E50;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,13 +70,13 @@
 }
 
 body {
-  min-height: 100vh;
+  /* min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
   transition:
     color 0.5s,
     background-color 0.5s;
-  line-height: 1.6;
+  line-height: 1.6; */
   font-family:
     Inter,
     -apple-system,
