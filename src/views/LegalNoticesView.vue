@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    <h1>The welcome</h1>
+    <h1>Legal Noticies View</h1>
   </main>
 </template>

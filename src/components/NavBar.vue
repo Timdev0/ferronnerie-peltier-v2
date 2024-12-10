@@ -1,28 +1,28 @@
 <template>
-  <header class="navbar">
-    <nav class="navbar__nav">
+  <header class="navbar" role="banner">
+    <nav class="navbar__nav" role="navigation" aria-label="Navigation Principale">
       <div class="navbar__nav__left">
-        <RouterLink class="navbar__nav__left__link navbar__nav__link" to="/" active-class="active-link">
-          <HomeIcon class="home-icon" />
+        <img class="home-icon" src="/src/assets/favicon.ico/" alt="Ferronnerie Peltier Logo" aria-hidden="true" />
+        <RouterLink class="navbar__nav__left__link navbar__nav__link" to="/" active-class="active-link"
+          aria-label="Aller à la page d'accueil">
           <span>Ferronnerie Peltier</span>
         </RouterLink>
       </div>
       <div class="navbar__nav__right">
-        <RouterLink class="navbar__nav__right__link navbar__nav__link" to="/gallery" active-class="active-link">
+        <RouterLink class="navbar__nav__right__link navbar__nav__link" to="/galerie" active-class="active-link"
+          aria-label="Aller à la galerie">
           Galerie
         </RouterLink>
-        <RouterLink class="navbar__nav__right__link navbar__nav__link" to="/contact" active-class="active-link">
+        <RouterLink class="navbar__nav__right__link navbar__nav__link" to="/contact" active-class="active-link"
+          aria-label="Aller à la page de contact">
           Contact
         </RouterLink>
       </div>
     </nav>
   </header>
 </template>
-
 <script setup>
 import { RouterLink } from 'vue-router'
-import { HomeIcon } from '@heroicons/vue/24/solid'
-
 
 </script>
 
@@ -32,6 +32,15 @@ import { HomeIcon } from '@heroicons/vue/24/solid'
   background-color: var(--color-primary);
   color: var(--color-white);
 
+  .active-link {
+    text-decoration: none;
+
+    &::after {
+      background-color: var(--color-white);
+      width: 100%;
+    }
+  }
+
   &__nav {
     padding: 2rem 6rem;
     display: flex;
@@ -40,13 +49,16 @@ import { HomeIcon } from '@heroicons/vue/24/solid'
     align-items: center;
 
     &__left {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+
       &__link {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        justify-content: center;
-        align-items: center;
         font-size: 1.5rem;
+        font-family: 'Cinzel', serif;
+        font-weight: 500;
       }
     }
 
@@ -60,6 +72,28 @@ import { HomeIcon } from '@heroicons/vue/24/solid'
     &__link {
       color: var(--color-white);
       text-decoration: none;
+      position: relative;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--color-gold);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -0.3rem;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-gold);
+        transition: width 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+        background-color: (var(--color-gold));
+      }
     }
   }
 
@@ -68,8 +102,6 @@ import { HomeIcon } from '@heroicons/vue/24/solid'
     height: 2rem;
   }
 
-  .active-link {
-    text-decoration: underline;
-  }
+
 }
 </style>
