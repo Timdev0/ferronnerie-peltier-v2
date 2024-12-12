@@ -1,11 +1,13 @@
 <template>
   <footer class="footer" role="contentinfo">
-    <p class="footer__text">
-      Copyright © Ferronnerie PELTIER {{ year }}
-    </p>
-    <RouterLink class="footer__link" to="/mentions-legales" active-class="active-link" aria-label="Mentions légales">
-      Mentions légales
-    </RouterLink>
+    <div class="footer__grid">
+      <RouterLink class="footer__link" to="/mentions-legales" active-class="active-link" aria-label="Mentions légales">
+        Mentions légales
+      </RouterLink>
+      <p class="footer__text">
+        Copyright © Ferronnerie PELTIER {{ year }}
+      </p>
+    </div>
   </footer>
 </template>
 
@@ -21,16 +23,8 @@ const year = ref(new Date().getFullYear())
   background-color: var(--color-primary);
   color: var(--color-white);
   padding: 1rem 6rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
   align-items: center;
-
-  &__text {
-    flex-grow: 1;
-    text-align: center;
-  }
-
 
   .active-link {
     text-decoration: none;
@@ -41,12 +35,23 @@ const year = ref(new Date().getFullYear())
     }
   }
 
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
   &__link {
     color: var(--color-white);
     text-decoration: none;
     position: relative;
     transition: color 0.3s ease-in-out;
-    margin-left: auto;
+    width: fit-content;
 
     &:hover {
       color: var(--color-gold);
@@ -65,7 +70,7 @@ const year = ref(new Date().getFullYear())
 
     &:hover::after {
       width: 100%;
-      background-color: (var(--color-gold));
+      background-color: var(--color-gold);
     }
   }
 
