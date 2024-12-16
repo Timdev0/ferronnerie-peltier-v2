@@ -15,6 +15,5 @@ import NavFooter from './components/NavFooter.vue'
 <style scoped lang="scss">
 .main-content {
   flex-grow: 1;
-  padding: 2rem 6rem;
 }
 </style>

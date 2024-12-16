@@ -25,6 +25,7 @@ const year = ref(new Date().getFullYear())
   padding: 1rem 6rem;
   display: grid;
   align-items: center;
+  font-size: 1rem;
 
   .active-link {
     text-decoration: none;
