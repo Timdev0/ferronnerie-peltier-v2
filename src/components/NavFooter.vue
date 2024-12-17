@@ -41,10 +41,12 @@ const year = ref(new Date().getFullYear())
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     width: 100%;
+    padding: 0.5rem;
   }
 
   &__text {
     text-align: center;
+    margin: 0;
   }
 
   &__link {

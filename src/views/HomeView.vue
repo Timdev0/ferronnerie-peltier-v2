@@ -97,6 +97,9 @@ onUnmounted(() => {
   top: -6rem;
   margin-bottom: -6rem;
   overflow: hidden;
+  width: 100%;
+
+
 
   .carousel {
     display: flex;
@@ -164,7 +167,12 @@ onUnmounted(() => {
 }
 
 section {
-  padding: 2rem 2rem;
+  padding: 2rem 10rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 2rem;
+  }
+
 }
 
 .intro {
@@ -172,19 +180,33 @@ section {
   flex-direction: row;
   gap: 2rem;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
   &__left {
-    width: 70%;
+    @media screen and (min-width: 768px) {
+      width: 70%;
+    }
   }
 
   &__right {
-    width: 30%;
+    @media screen and (min-width: 768px) {
+      width: 30%;
+    }
+
     padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
+
     &__img {
       width: 100%;
+      max-width: 350px;
     }
   }
 }
