@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import ImageCard from '@/components/ImageCard.vue';
 
 const isScrolled = ref(false);
 const currentIndex = ref(0);
@@ -7,7 +8,7 @@ const images = [
   '/src/assets/imgs/01.jpg',
   '/src/assets/imgs/02.jpg',
   '/src/assets/imgs/03.jpg',
-  '/src/assets/imgs/04.jpg',
+  '/src/assets/imgs/17.jpg',
 ];
 let intervalId = null;
 
@@ -35,6 +36,40 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
   stopCarousel();
 });
+
+const imagesCreation = [
+  {
+    src: '/src/assets/imgs/05.jpg',
+    thumb: '/src/assets/imgs/05-thumb.jpg',
+    title: 'Main courante en fer forgé',
+  },
+  {
+    src: '/src/assets/imgs/15.jpg',
+    thumb: '/src/assets/imgs/15-thumb.jpg',
+    title: 'Portail en fer forgé',
+  },
+  {
+    src: '/src/assets/imgs/09.jpg',
+    thumb: '/src/assets/imgs/09-thumb.jpg',
+    title: 'Décoration murale',
+  },
+  {
+    src: '/src/assets/imgs/06.jpg',
+    thumb: '/src/assets/imgs/06-thumb.jpg',
+    title: 'Rampe d\'escalier en fer forgé',
+  },
+  {
+    src: '/src/assets/imgs/16.jpg',
+    thumb: '/src/assets/imgs/16-thumb.jpg',
+    title: 'Véranda en fer forgé',
+  },
+  {
+    src: '/src/assets/imgs/08.jpg',
+    thumb: '/src/assets/imgs/08-thumb.jpg',
+    title: 'Serrurerie',
+  },
+]
+
 </script>
 
 
@@ -84,6 +119,10 @@ onUnmounted(() => {
     <section class="creations">
       <h2>Nos Créations</h2>
       <p>Découvrez nos réalisations uniques, conçues sur-mesure pour sublimer vos espaces.</p>
+      <div class="creations__grid">
+        <ImageCard v-for="(image, index) in imagesCreation" :key="index" :src="image.src" :title="image.title"
+          :thumb="image.thumb" />
+      </div>
     </section>
   </main>
 </template>
@@ -98,8 +137,6 @@ onUnmounted(() => {
   margin-bottom: -6rem;
   overflow: hidden;
   width: 100%;
-
-
 
   .carousel {
     display: flex;
@@ -172,7 +209,6 @@ section {
   @media screen and (max-width: 768px) {
     padding: 2rem;
   }
-
 }
 
 .intro {
@@ -186,7 +222,6 @@ section {
     align-items: center;
   }
 
-
   &__left {
     @media screen and (min-width: 768px) {
       width: 70%;
@@ -194,15 +229,14 @@ section {
   }
 
   &__right {
-    @media screen and (min-width: 768px) {
-      width: 30%;
-    }
-
     padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    @media screen and (min-width: 768px) {
+      width: 30%;
+    }
 
     &__img {
       width: 100%;
@@ -215,6 +249,15 @@ section {
   text-align: center;
   background-color: var(--color-secondary);
   color: var(--color-white);
+
+  &__grid {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+  }
 
   p {
     font-size: 1.2rem;
