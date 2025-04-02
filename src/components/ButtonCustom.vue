@@ -1,9 +1,3 @@
-<template>
-  <button :class="['btn', variantClass]" :aria-label="ariaLabel" @click="handleClick">
-    <slot />
-  </button>
-</template>
-
 <script setup>
 import { defineProps, defineEmits, computed } from 'vue'
 
@@ -28,6 +22,12 @@ const variantClass = computed(() => {
   return `btn--${props.variant}`
 })
 </script>
+
+<template>
+  <button :class="['btn', variantClass]" :aria-label="ariaLabel" @click="handleClick">
+    <slot />
+  </button>
+</template>
 
 <style scoped lang="scss">
 .btn {
