@@ -1,18 +1,24 @@
 <template>
   <div>
     <div class="card">
-      <img @click="imageShown = true" :src="thumb" :alt="`Image de ${title}`" />
-      <p class="card__title">{{ title }}</p>
+      <figure class="card__figure">
+        <img @click="imageShown = true" :src="thumb" :alt="`Image de ${title}`" tabindex="0"
+          @keydown.enter="imageShown = true" class="card__image" />
+        <figcaption class="card__title">{{ title }}</figcaption>
+      </figure>
     </div>
-    <div v-if="imageShown" @click="imageShown = false" class="card-full">
+    <div v-if="imageShown" @click="imageShown = false" class="card-full" aria-hidden="false">
       <img @click.stop :src="src" :alt="`Image de ${title}`" class="card-full__img" />
-      <button class="card-full__close-btn" @click="imageShown = false" aria-label="Fermer l'image">X</button>
+      <button class="card-full__close-btn" @click="imageShown = false" aria-label="Fermer l'image">
+        X
+      </button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, } from 'vue'
+import { ref } from 'vue'
+
 defineProps({
   title: String,
   thumb: String,
@@ -20,7 +26,6 @@ defineProps({
 })
 
 const imageShown = ref(false)
-
 </script>
 
 <style lang="scss" scoped>
@@ -45,10 +50,16 @@ const imageShown = ref(false)
     font-size: 1.25rem;
   }
 
-  img {
+  &__figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__image {
     width: 100%;
     height: auto;
     cursor: pointer;
+    outline: none;
   }
 }
 
@@ -65,7 +76,7 @@ const imageShown = ref(false)
   align-items: center;
   cursor: pointer;
 
-  img {
+  &__img {
     cursor: default;
     max-width: 80%;
     max-height: 80%;
@@ -83,7 +94,7 @@ const imageShown = ref(false)
   }
 
   &__close-btn:hover {
-    color: var(--color-gold)
+    color: var(--color-gold);
   }
 }
 </style>

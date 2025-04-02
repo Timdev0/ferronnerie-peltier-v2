@@ -12,6 +12,9 @@
       <p>Email: ferronnerie.peltier@free.fr</p>
       <p>Téléphone: +33 1 60 71 61 25</p>
       <p> Numéro SIRET: 81137965000013</p>
+      <h2>Développement</h2>
+      <p>Le site a été développé par Quentin Peltier.</p>
+      <p>Lien Github : <a target="_blank" href="https://github.com/Timdev0">https://github.com/Timdev0</a></p>
       <h2>Hébergement</h2>
       <p>Le site est hébergé par Netlify, Inc., situé au 512 2nd Street, Suite 200, San Francisco, CA 94107. Vous pouvez
         les contacté par correspondance à l'adresse suivante : PO Box, PMB 87587, San Francisco, CA

@@ -133,13 +133,13 @@ const imagesGallery = ref([
 
 <template>
   <div class="gallery">
-    <section>
-      <h1>Galerie </h1>
+    <section aria-labelledby="gallery-title">
+      <h1 id="gallery-title">Galerie</h1>
       <p>
         Plongez au cœur de notre savoir-faire artisanal à travers cette galerie de créations uniques. Chaque pièce
         présentée ici témoigne de notre passion pour la ferronnerie d'art.
-        Que ce soit des portails élégants, des rampes d’escaliers sur-mesure ou encore des verrières raffinées ou
-        encore, chaque ouvrage est conçu avec précision et souci du détail.
+        Que ce soit des portails élégants, des rampes d’escaliers sur-mesure ou encore des verrières raffinées, chaque
+        ouvrage est conçu avec précision et souci du détail.
         Laissez-vous inspirer par nos réalisations et imaginez votre propre projet sur-mesure.
       </p>
       <div class="gallery__grid">
