@@ -1,9 +1,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import ImageCard from '@/components/ImageCard.vue';
-import img1 from '@/assets/imgs/01.jpg';
-import img2 from '@/assets/imgs/02.jpg';
-import img3 from '@/assets/imgs/03.jpg';
+import img1 from '@/assets/imgs/01.JPG';
+import img2 from '@/assets/imgs/02.JPG';
+import img3 from '@/assets/imgs/03.JPG';
 import img4 from '@/assets/imgs/17.jpg';
 
 const isScrolled = ref(false);
