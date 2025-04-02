@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import ModalCustom from '@/components/ModalCustom.vue'
+import ButtonCustom from '@/components/ButtonCustom.vue';
 
 const isMapEnabled = ref(false);
 const isModalOpen = ref(false)
@@ -68,18 +69,18 @@ const acceptWarning = () => {
 
     <section aria-labelledby="map-title">
       <h2 id="map-title">Carte</h2>
-      <button v-if="isMapEnabled" @click="toggleMap" class="contact__btn" aria-label="Désactiver la carte">
+      <ButtonCustom v-if="isMapEnabled" @click="toggleMap" aria-label="Désactiver la carte" variant="primary">
         Désactiver la carte
-      </button>
-      <button v-if="!isMapEnabled" @click="toggleModal" class="contact__btn" aria-label="'Activer la carte'">
+      </ButtonCustom>
+      <ButtonCustom v-if="!isMapEnabled" @click="toggleModal" aria-label="Activer la carte" variant="primary">
         Activer la carte
-      </button>
+      </ButtonCustom>
       <iframe v-if="isMapEnabled" class="contact__map" title="Carte Google Maps de l'Atelier Peltier"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5295.279079710308!2d2.7640807768856774!3d48.425064171276674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5f58d36811ea1%3A0x8947ea3a74ca0644!2sPeltier%20Willy!5e0!3m2!1sfr!2sfr!4v1743599900819!5m2!1sfr!2sfr"
         width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
+
     <ModalCustom :isOpen="isModalOpen" @close="toggleModal">
       <p class="contact__modal__title">
         Protection de votre vie privée
@@ -89,17 +90,17 @@ const acceptWarning = () => {
         vous choisissez d'activer la carte Google Maps, Google pourra collecter certaines informations, telles que votre
         adresse IP et votre position approximative, conformément à sa
         <a href="https://policies.google.com/privacy" target="_blank"
-          aria-label='Politique de confidentialité de Google'>politique de confidentialité</a>.
+          aria-label="Politique de confidentialité de Google">politique de confidentialité</a>.
         En activant la carte, vous consentez au traitement de ces données par Google.
       </p>
       <p>Vous pouvez activer ou désactiver la carte à tout moment.</p>
       <div class="contact__modal__btns">
-        <button @click="acceptWarning" aria-label="Activer la carte" class="contact__btn">
+        <ButtonCustom @click="acceptWarning" aria-label="Activer la carte" variant="primary">
           Activer
-        </button>
-        <button @click="toggleModal" aria-label="Annuler l'activation de la carte" class="contact__btn">
+        </ButtonCustom>
+        <ButtonCustom @click="toggleModal" aria-label="Annuler l'activation de la carte" variant="secondary">
           Annuler
-        </button>
+        </ButtonCustom>
       </div>
     </ModalCustom>
   </div>
@@ -128,36 +129,6 @@ const acceptWarning = () => {
 
     ul {
       margin: 0;
-    }
-  }
-
-
-  &__btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-
-    &:hover {
-      background-color: var(--color-secondary);
-      transform: translateY(-2px);
-    }
-
-    &:active {
-      transform: translateY(0);
-    }
-
-    &:focus {
-      outline: 2px solid var(--color-secondary);
-      outline-offset: 2px;
     }
   }
 

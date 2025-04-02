@@ -9,6 +9,10 @@
 
   --color-gold: #FFC107;
 
+  /* default red, should be changed */
+
+  --color-danger: #FF3D00;
+
 }
 
 @font-face {
