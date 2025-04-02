@@ -27,6 +27,11 @@ const year = ref(new Date().getFullYear())
   align-items: center;
   font-size: 1rem;
 
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
   .active-link {
     text-decoration: none;
 
@@ -42,6 +47,12 @@ const year = ref(new Date().getFullYear())
     align-items: center;
     width: 100%;
     padding: 0.5rem;
+
+    @media screen and (max-width: 768px) {
+      padding: 0;
+      grid-template-columns: 1fr 1fr;
+
+    }
   }
 
   &__text {

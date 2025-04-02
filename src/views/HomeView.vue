@@ -138,6 +138,10 @@ const imagesCreation = ref([
   overflow: hidden;
   width: 100%;
 
+  @media screen and (max-width: 768px) {
+    top: 0;
+  }
+
   .carousel {
     display: flex;
     height: 100%;
@@ -164,6 +168,11 @@ const imagesCreation = ref([
     border-radius: 8px;
     transition: opacity 0.3s ease, transform 0.3s ease;
 
+    @media screen and (max-width: 768px) {
+      left: 4%;
+      transform: (translate(-2%, -50%));
+    }
+
     &.hidden {
       opacity: 0;
       transform: translate(-50%, -100%);
@@ -171,6 +180,10 @@ const imagesCreation = ref([
 
     h1 {
       font-family: 'Cinzel', serif;
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.25rem;
+      }
     }
 
     p {
@@ -235,6 +248,7 @@ section {
     align-items: center;
 
     @media screen and (min-width: 768px) {
+      padding: 0rem;
       width: 30%;
     }
 

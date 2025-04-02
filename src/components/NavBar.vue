@@ -49,6 +49,10 @@ import { RouterLink } from 'vue-router'
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (max-width: 768px) {
+      padding: 0.5rem 0.5rem;
+    }
+
     &__left {
       display: flex;
       flex-direction: row;
@@ -60,6 +64,10 @@ import { RouterLink } from 'vue-router'
         font-size: 1.5rem;
         font-family: 'Cinzel', serif;
         font-weight: 500;
+
+        @media screen and (max-width: 768px) {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -102,6 +110,10 @@ import { RouterLink } from 'vue-router'
   .home-icon {
     width: 2rem;
     height: 2rem;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
 

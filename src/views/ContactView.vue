@@ -1,3 +1,4 @@
+s
 <script setup>
 import { ref, onMounted } from 'vue';
 import ModalCustom from '@/components/ModalCustom.vue'
@@ -67,7 +68,7 @@ const acceptWarning = () => {
       </address>
     </section>
 
-    <section aria-labelledby="map-title">
+    <section class="contact__map-section" aria-labelledby="map-title">
       <h2 id="map-title">Carte</h2>
       <ButtonCustom v-if="isMapEnabled" @click="toggleMap" aria-label="Désactiver la carte" variant="primary">
         Désactiver la carte
@@ -132,9 +133,13 @@ const acceptWarning = () => {
     }
   }
 
+  &__map-section {
+    margin-bottom: 2rem;
+  }
+
   &__map {
     height: 800px;
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
   }
 
   &__modal {
