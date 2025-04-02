@@ -72,7 +72,7 @@ const variantClass = computed(() => {
     color: var(--color-white);
 
     &:hover {
-      background-color: var(--color-danger);
+      background-color: var(--color-danger-dark);
     }
   }
 }
