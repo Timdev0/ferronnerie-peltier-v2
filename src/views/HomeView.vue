@@ -1,14 +1,18 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import ImageCard from '@/components/ImageCard.vue';
+import img1 from '@/assets/imgs/01.jpg';
+import img2 from '@/assets/imgs/02.jpg';
+import img3 from '@/assets/imgs/03.jpg';
+import img4 from '@/assets/imgs/17.jpg';
 
 const isScrolled = ref(false);
 const currentIndex = ref(0);
 const images = [
-  '/src/assets/imgs/01.jpg',
-  '/src/assets/imgs/02.jpg',
-  '/src/assets/imgs/03.jpg',
-  '/src/assets/imgs/17.jpg',
+  img1,
+  img2,
+  img3,
+  img4,
 ];
 let intervalId = null;
 
