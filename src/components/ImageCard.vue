@@ -31,22 +31,24 @@ const imageShown = ref(false)
   justify-content: center;
   align-items: center;
   text-align: center;
-  cursor: pointer;
   max-width: 400px;
   height: auto;
   background-color: var(--color-white);
   padding: 0.5rem 0.5rem 0 0.5rem;
   color: var(--color-primary);
   border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   &__title {
     margin-bottom: 0;
     padding: 0.5rem 0;
+    font-size: 1.25rem;
   }
 
   img {
     width: 100%;
     height: auto;
+    cursor: pointer;
   }
 }
 

@@ -5,7 +5,7 @@
 
   --color-ter: #B0A295;
 
-  --color-white: #F5F5F5;
+  --color-white: #FFFFFF;
 
   --color-gold: #FFC107;
 
@@ -37,6 +37,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-white);
 }
 
 h1,

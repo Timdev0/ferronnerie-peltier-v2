@@ -37,7 +37,7 @@ onUnmounted(() => {
   stopCarousel();
 });
 
-const imagesCreation = [
+const imagesCreation = ref([
   {
     src: '/src/assets/imgs/05.jpg',
     thumb: '/src/assets/imgs/05-thumb.jpg',
@@ -68,7 +68,7 @@ const imagesCreation = [
     thumb: '/src/assets/imgs/08-thumb.jpg',
     title: 'Serrurerie',
   },
-]
+]);
 
 </script>
 
