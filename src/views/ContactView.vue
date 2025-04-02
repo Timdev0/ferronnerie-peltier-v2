@@ -82,7 +82,8 @@ const acceptWarning = () => {
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
-    <ModalCustom :isOpen="isModalOpen" @close="toggleModal">
+    <ModalCustom :isOpen="isModalOpen" @close="toggleModal" role="dialog" aria-labelledby="modal-title"
+      aria-describedby="modal-description">
       <p class="contact__modal__title">
         Protection de votre vie privée
       </p>
