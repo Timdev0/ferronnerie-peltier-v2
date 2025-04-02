@@ -1,10 +1,22 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import ImageCard from '@/components/ImageCard.vue';
-import img1 from '@/assets/imgs/01.JPG';
-import img2 from '@/assets/imgs/02.JPG';
-import img3 from '@/assets/imgs/03.JPG';
+import img1 from '@/assets/imgs/01.jpg';
+import img2 from '@/assets/imgs/02.jpg';
+import img3 from '@/assets/imgs/03.jpg';
 import img4 from '@/assets/imgs/17.jpg';
+import img5 from '@/assets/imgs/05.jpg';
+import imgThumb5 from '@/assets/imgs/05-thumb.jpg';
+import img15 from '@/assets/imgs/15.jpg';
+import imgThumb15 from '@/assets/imgs/15-thumb.jpg';
+import img9 from '@/assets/imgs/09.jpg';
+import imgThumb9 from '@/assets/imgs/09-thumb.jpg';
+import img6 from '@/assets/imgs/06.jpg';
+import imgThumb6 from '@/assets/imgs/06-thumb.jpg';
+import img16 from '@/assets/imgs/16.jpg';
+import imgThumb16 from '@/assets/imgs/16-thumb.jpg';
+import img8 from '@/assets/imgs/08.jpg';
+import imgThumb8 from '@/assets/imgs/08-thumb.jpg';
 
 const isScrolled = ref(false);
 const currentIndex = ref(0);
@@ -43,33 +55,33 @@ onUnmounted(() => {
 
 const imagesCreation = ref([
   {
-    src: '/src/assets/imgs/05.jpg',
-    thumb: '/src/assets/imgs/05-thumb.jpg',
+    src: img5,
+    thumb: imgThumb5,
     title: 'Main courante en fer forgé',
   },
   {
-    src: '/src/assets/imgs/15.jpg',
-    thumb: '/src/assets/imgs/15-thumb.jpg',
+    src: img6,
+    thumb: imgThumb6,
     title: 'Portail en fer forgé',
   },
   {
-    src: '/src/assets/imgs/09.jpg',
-    thumb: '/src/assets/imgs/09-thumb.jpg',
+    src: img15,
+    thumb: imgThumb15,
     title: 'Décoration murale',
   },
   {
-    src: '/src/assets/imgs/06.jpg',
-    thumb: '/src/assets/imgs/06-thumb.jpg',
+    src: img9,
+    thumb: imgThumb9,
     title: 'Rampe d\'escalier en fer forgé',
   },
   {
-    src: '/src/assets/imgs/16.jpg',
-    thumb: '/src/assets/imgs/16-thumb.jpg',
+    src: img16,
+    thumb: imgThumb16,
     title: 'Véranda en fer forgé',
   },
   {
-    src: '/src/assets/imgs/08.jpg',
-    thumb: '/src/assets/imgs/08-thumb.jpg',
+    src: img8,
+    thumb: imgThumb8,
     title: 'Serrurerie',
   },
 ]);
