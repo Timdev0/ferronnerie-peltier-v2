@@ -62,17 +62,17 @@ const imagesCreation = ref([
   {
     src: img6,
     thumb: imgThumb6,
-    title: 'Portail en fer forgé',
+    title: 'Rampe d\'escalier en fer forgé',
   },
   {
     src: img15,
     thumb: imgThumb15,
-    title: 'Décoration murale',
+    title: 'Portail en fer forgé',
   },
   {
     src: img9,
     thumb: imgThumb9,
-    title: 'Rampe d\'escalier en fer forgé',
+    title: 'Décoration murale',
   },
   {
     src: img16,
@@ -139,6 +139,9 @@ const imagesCreation = ref([
         <ImageCard v-for="(image, index) in imagesCreation" :key="index" :src="image.src" :title="image.title"
           :thumb="image.thumb" />
       </div>
+      <p>Pour voir plus de nos creations cliquez ici : <RouterLink aria-label="Galerie" to="/galerie">Galerie
+        </RouterLink>
+      </p>
     </section>
   </main>
 </template>
@@ -282,6 +285,7 @@ section {
 
   &__grid {
     margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
