@@ -136,11 +136,25 @@ const acceptWarning = () => {
 
   &__map-section {
     margin-bottom: 2rem;
+
+    @media screen and (max-width: 768px) {
+      padding: 0 !important;
+    }
+
+    h2,
+    button {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
   }
 
   &__map {
     height: 800px;
     margin: 2rem 0 0 0;
+
+    @media screen and (max-width: 768px) {
+      height: 600px;
+    }
   }
 
   &__modal {
