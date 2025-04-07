@@ -50,7 +50,7 @@ import { RouterLink } from 'vue-router'
     align-items: center;
 
     @media screen and (max-width: 768px) {
-      padding: 0.5rem 0.5rem;
+      padding: 0.75rem 0.5rem;
     }
 
     &__left {

@@ -68,6 +68,9 @@ const imagesGallery = ref([
   { src: img18, thumb: img18Thumb, title: 'Véranda' },
   { src: img19, thumb: img19Thumb, title: 'Portail' },
   { src: img20, thumb: img20Thumb, title: 'Table en fer forgé' },
+])
+
+const imagesGalleryVertical = ref([
   { src: img91, thumb: img91Thumb, title: 'Portail décoratif en fer forgé' },
   { src: img92, thumb: img92Thumb, title: 'Meuble' },
   { src: img93, thumb: img93Thumb, title: 'Escalier en fer forgé' },
@@ -95,6 +98,11 @@ const imagesGallery = ref([
         <ImageCard v-for="(image, index) in imagesGallery" :key="index" :src="image.src" :title="image.title"
           :thumb="image.thumb" />
       </div>
+      <hr>
+      <div class="gallery__grid">
+        <ImageCard v-for="(image, index) in imagesGalleryVertical" :key="index" :src="image.src" :title="image.title"
+          :thumb="image.thumb" />
+      </div>
     </section>
   </div>
 </template>
@@ -109,11 +117,16 @@ const imagesGallery = ref([
     }
   }
 
+  hr {
+    opacity: 0.5;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
 
     @media screen and (max-width: 768px) {
       gap: 1rem;

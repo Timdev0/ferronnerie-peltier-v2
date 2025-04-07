@@ -67,6 +67,15 @@ const variantClass = computed(() => {
     }
   }
 
+  &--light {
+    background-color: var(--color-ter);
+    color: var(--color-primary);
+
+    &:hover {
+      background-color: var(--color-secondary);
+    }
+  }
+
   &--danger {
     background-color: var(--color-danger);
     color: var(--color-white);

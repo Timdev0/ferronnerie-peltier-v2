@@ -139,7 +139,9 @@ const imagesCreation = ref([
         <ImageCard v-for="(image, index) in imagesCreation" :key="index" :src="image.src" :title="image.title"
           :thumb="image.thumb" />
       </div>
-      <p>Pour voir plus de nos creations cliquez ici : <RouterLink aria-label="Galerie" to="/galerie">Galerie
+      <p>Pour voir plus de nos creations cliquez ici : <RouterLink class="gallery-link"
+          aria-label="Accéder à la Galerie" to="/galerie">
+          Accéder à la Galerie
         </RouterLink>
       </p>
     </section>
@@ -156,10 +158,6 @@ const imagesCreation = ref([
   margin-bottom: -6rem;
   overflow: hidden;
   width: 100%;
-
-  @media screen and (max-width: 768px) {
-    top: 0;
-  }
 
   .carousel {
     display: flex;
@@ -297,6 +295,14 @@ section {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  .gallery-link {
+    color: var(--color-white);
+  }
+
+  .gallery-link:hover {
+    color: var(--color-gold);
   }
 }
 
