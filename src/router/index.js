@@ -27,6 +27,11 @@ const router = createRouter({
       name: 'legal-notices',
       component: () => import('../views/LegalNoticesView.vue'),
     },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('../views/NotFoundView.vue'),
+    },
   ],
 })
 
