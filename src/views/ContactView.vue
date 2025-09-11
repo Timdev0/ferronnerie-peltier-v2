@@ -61,9 +61,8 @@ const acceptWarning = () => {
           🕒 <abbr title="Horaires d'ouverture">Horaires</abbr> :
         </p>
         <ul>
-          <li>Lundi au Vendredi : 8h - 12h / 13h - 16h</li>
-          <li>Samedi : 9h - 12h</li>
-          <li>Dimanche : Fermé</li>
+          <li>Lundi au Vendredi : 8h - 12h / 13h - 17h</li>
+          <li>Samedi et Dimanche : Fermé</li>
         </ul>
       </address>
     </section>

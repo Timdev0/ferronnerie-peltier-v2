@@ -97,7 +97,7 @@ const imagesCreation = ref([
           :style="{ backgroundImage: `url(${image})` }"></div>
       </div>
       <div class="carousel-text" :class="{ hidden: isScrolled }">
-        <h1>Ferronnerie d'Art - Serrurerie - Métallerie | Willy Peltier</h1>
+        <h1>Ferronnerie d'Art - Serrurerie - Métallerie | Peltier</h1>
         <p>Le feu et le fer au service de l'art</p>
       </div>
       <div class="scroll-indicator">
