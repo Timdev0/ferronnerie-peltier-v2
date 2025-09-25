@@ -14,29 +14,23 @@ const mainMarginTop = computed(() => {
   return `${navbarHeight.value}px`;
 });
 
+let scrollTimeout;
 const handleScroll = throttle(() => {
   isScrolled.value = window.scrollY > 0;
-}, 100);
-
-let scrollTimeout;
-const handleScrollEnd = () => {
   clearTimeout(scrollTimeout);
   scrollTimeout = setTimeout(() => {
     isScrolled.value = window.scrollY > 0;
   }, 120);
-};
-
+}, 100);
 onMounted(() => {
   if (navbarRef.value) {
     navbarHeight.value = navbarRef.value?.$el?.offsetHeight || 0;
   }
   window.addEventListener('scroll', handleScroll);
-  window.addEventListener('scroll', handleScrollEnd);
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
-  window.removeEventListener('scroll', handleScrollEnd);
 });
 </script>
 
