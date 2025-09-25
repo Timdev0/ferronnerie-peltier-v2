@@ -134,7 +134,7 @@ const props = defineProps({
   }
 }
 
-.scrolled.navbar {
+.navbar.scrolled {
 
   height: 3.125rem;
 
