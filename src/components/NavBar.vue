@@ -23,7 +23,6 @@
 </template>
 <script setup>
 import { RouterLink } from 'vue-router'
-import { defineProps } from 'vue';
 
 const props = defineProps({
   isScrolled: {

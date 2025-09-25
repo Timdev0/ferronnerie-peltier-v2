@@ -21,11 +21,11 @@ onMounted(() => {
     navbarHeight.value = navbarRef.value.$el.offsetHeight;
   }
   window.addEventListener('scroll', handleScroll);
-})
+});
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
-})
+});
 </script>
 
 <template>
