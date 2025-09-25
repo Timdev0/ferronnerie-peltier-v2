@@ -1,5 +1,5 @@
 <template>
-  <header class="navbar" role="banner">
+  <header class="navbar" :class="{ 'scrolled': props.isScrolled }" role="banner">
     <nav class="navbar__nav" role="navigation" aria-label="Navigation Principale">
       <div class="navbar__nav__left">
         <img class="home-icon" src="/src/assets/favicon.ico/" alt="Ferronnerie Peltier Logo" aria-hidden="true" />
@@ -23,15 +23,33 @@
 </template>
 <script setup>
 import { RouterLink } from 'vue-router'
+import { defineProps } from 'vue';
+
+const props = defineProps({
+  isScrolled: {
+    type: Boolean,
+    required: true
+  }
+});
 
 </script>
 
 
 <style scoped lang="scss">
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  transition: all 0.3s ease-in-out;
   background-color: var(--color-primary);
   color: var(--color-white);
   z-index: 2;
+
+  @media screen and (max-width: 768px) {
+    height: 2.875rem;
+  }
 
   .active-link {
     text-decoration: none;
@@ -115,7 +133,48 @@ import { RouterLink } from 'vue-router'
       display: none;
     }
   }
+}
 
+.scrolled.navbar {
 
+  height: 3.125rem;
+
+  @media screen and (max-width: 768px) {
+    height: 2.125rem;
+  }
+
+  .navbar {
+    &__nav {
+      padding: 0.5rem 6rem;
+
+      @media screen and (max-width: 768px) {
+        padding: 0.5rem 0.5rem;
+      }
+
+      &__left {
+        &__link {
+          font-size: 1rem;
+
+          @media screen and (max-width: 768px) {
+            font-size: 0.875rem;
+          }
+
+          &::after {
+            bottom: -0.2rem;
+            height: 1px;
+          }
+        }
+
+      }
+
+      &__right {
+        font-size: 0.875rem;
+
+        @media screen and (max-width: 768px) {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
 }
 </style>
