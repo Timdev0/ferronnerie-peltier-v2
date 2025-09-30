@@ -65,6 +65,7 @@ const props = defineProps({
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    transition: padding 0.3s;
 
     @media screen and (max-width: 768px) {
       padding: 0.75rem 0.5rem;
@@ -81,6 +82,7 @@ const props = defineProps({
         font-size: 1.5rem;
         font-family: 'Cinzel', serif;
         font-weight: 500;
+        transition: font-size 0.3s, padding 0.3s, color 0.3s;
 
         @media screen and (max-width: 768px) {
           font-size: 1rem;
@@ -100,7 +102,7 @@ const props = defineProps({
       color: var(--color-white);
       text-decoration: none;
       position: relative;
-      transition: color 0.3s ease-in-out;
+      transition: font-size 0.3s, padding 0.3s, color 0.3s;
 
       &:hover {
         color: var(--color-gold);
@@ -127,6 +129,7 @@ const props = defineProps({
   .home-icon {
     width: 2rem;
     height: 2rem;
+    transition: width 0.3s, height 0.3s;
 
     @media screen and (max-width: 768px) {
       display: none;
@@ -142,9 +145,14 @@ const props = defineProps({
     height: 2.125rem;
   }
 
+  .home-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   .navbar {
     &__nav {
-      padding: 0.5rem 6rem;
+      padding: 0.8rem 6rem;
 
       @media screen and (max-width: 768px) {
         padding: 0.5rem 0.5rem;
