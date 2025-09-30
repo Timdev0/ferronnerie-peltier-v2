@@ -102,7 +102,6 @@ const props = defineProps({
       color: var(--color-white);
       text-decoration: none;
       position: relative;
-      transition: color 0.3s ease-in-out;
       transition: font-size 0.3s, padding 0.3s, color 0.3s;
 
       &:hover {
