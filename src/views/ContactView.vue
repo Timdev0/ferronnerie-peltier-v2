@@ -50,6 +50,8 @@ const acceptWarning = () => {
         <p>
           📞 <abbr title="Numéro de Téléphone">Téléphone</abbr> :
           <a href="tel:0160716125" aria-label="Appeler le 01 60 71 61 25">01 60 71 61 25</a>
+          ou
+          <a href="tel:0618552828" aria-label="Appeler le 06 18 55 28 28">06 18 55 28 28</a>
         </p>
         <p>
           📧 <abbr title="Adresse e-mail">Adresse e-mail</abbr> :
