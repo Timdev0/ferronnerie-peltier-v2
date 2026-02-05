@@ -139,7 +139,7 @@ const imagesCreation = ref([
         <ImageCard v-for="(image, index) in imagesCreation" :key="index" :src="image.src" :title="image.title"
           :thumb="image.thumb" />
       </div>
-      <p>Pour voir plus de nos creations cliquez ici : <RouterLink class="gallery-link"
+      <p>Pour voir plus de nos créations cliquez ici : <RouterLink class="gallery-link"
           aria-label="Accéder à la Galerie" to="/galerie">
           Accéder à la Galerie
         </RouterLink>
