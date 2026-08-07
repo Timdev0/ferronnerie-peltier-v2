@@ -39,6 +39,11 @@ const props = defineProps({
   &--scrolled {
     padding: 0.5rem 0em;
     font-size: 0.85rem;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 34px !important;
+    }
+
   }
 }
 
