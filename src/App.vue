@@ -4,6 +4,7 @@ import { RouterView } from 'vue-router'
 import Navbar from './components/NavBar.vue'
 import NavFooter from './components/NavFooter.vue'
 import { throttle } from '@/utils/throttle.js'
+import InformationBar from './components/InformationBar.vue'
 
 
 const navbarRef = ref(null);
@@ -36,6 +37,8 @@ onUnmounted(() => {
 
 <template>
   <Navbar ref="navbarRef" :isScrolled="isScrolled" />
+
+  <InformationBar :margin-top="mainMarginTop" :is-scrolled="isScrolled" />
 
   <RouterView class="main-content" :style="{ 'margin-top': mainMarginTop }" />
 
