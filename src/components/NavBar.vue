@@ -19,9 +19,12 @@
         </RouterLink>
       </div>
     </nav>
+    <InformationBar :is-active="true" />
   </header>
+
 </template>
 <script setup>
+import InformationBar from '@/components/InformationBar.vue'
 import { RouterLink } from 'vue-router'
 
 const props = defineProps({
@@ -40,15 +43,11 @@ const props = defineProps({
   top: 0;
   left: 0;
   width: 100%;
-  height: 6rem;
   transition: all 0.3s ease-in-out;
   background-color: var(--color-primary);
   color: var(--color-white);
   z-index: 2;
 
-  @media screen and (max-width: 768px) {
-    height: 2.875rem;
-  }
 
   .active-link {
     text-decoration: none;
@@ -139,10 +138,10 @@ const props = defineProps({
 
 .navbar.scrolled {
 
-  height: 3.125rem;
+  font-size: 0.875rem;
 
   @media screen and (max-width: 768px) {
-    height: 2.125rem;
+    font-size: 0.75rem;
   }
 
   .home-icon {
