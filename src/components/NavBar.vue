@@ -19,7 +19,7 @@
         </RouterLink>
       </div>
     </nav>
-    <InformationBar :is-active="true" />
+    <InformationBar :is-active="falses" />
   </header>
 
 </template>
